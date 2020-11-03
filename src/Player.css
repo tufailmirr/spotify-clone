@@ -1,0 +1,8 @@
+*{
+margin: 0;
+}
+.player__body{
+    
+    display: flex;
+
+}
