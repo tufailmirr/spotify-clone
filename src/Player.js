@@ -1,5 +1,5 @@
 import React from 'react';
-import {useDataLayerValue} from './Datalayer'
+// import {useDataLayerValue} from './Datalayer'
 import './Player.css'
 import Sidebar from './Sidebar';
 import Body from './Body'
@@ -14,7 +14,6 @@ function Player({spotify}) {
             {/* {Body} */}
             </div>
             <Footer/>
-       
         {/* {footer} */}
         </div>
     )

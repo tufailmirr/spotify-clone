@@ -6,6 +6,7 @@ import SpotifyWebApi from "spotify-web-api-js";
 import Player from './Player';
 import { useDataLayerValue } from './Datalayer'
 
+
 const spotify = new SpotifyWebApi();
 
 
@@ -32,10 +33,24 @@ function App() {
         dispatch ({
           type: "SET_USER",
           user :user
-        })
+        });
+
       
       }).catch(error =>{
         console.log(error.response);
+      });
+
+      spotify.getUserPlaylists().then((playlists) => {
+        dispatch({
+          type : "SET_PLAYLISTS",
+          playlists : playlists
+        })
+      });
+      spotify.getPlaylist("37i9dQZEVXbMDoHDwVN2tF").then( response => {
+        dispatch({
+          type : 'SET_DISCOVER_DAILY',
+          discover_daily : response
+        })
       })
     }
 
