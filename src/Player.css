@@ -1,8 +1,13 @@
 *{
 margin: 0;
+
+}
+*::-webkit-scrollbar{
+    display: none;
 }
 .player__body{
     
     display: flex;
 
 }
+
